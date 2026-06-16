@@ -2666,3 +2666,11 @@ ul { list-style: none; }
 
   .rp-title { font-size: 22px; }
 }
+
+/* ─── CREATOR ONLY PANEL (single-role mode) ─── */
+.creator-only-panel .role-panel {
+  display: block !important;
+}
+.creator-only-panel .rp-body {
+  grid-template-columns: 1fr 360px;
+}
