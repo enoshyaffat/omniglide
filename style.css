@@ -1645,7 +1645,7 @@ ul { list-style: none; }
   animation: panelFadeIn 0.4s ease;
 }
 
-.role-panel.active { display: block; }
+.role-panel.active { display: block !important; }
 
 @keyframes panelFadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -2665,12 +2665,4 @@ ul { list-style: none; }
   .rp-header { flex-direction: column; align-items: flex-start; }
 
   .rp-title { font-size: 22px; }
-}
-
-/* ─── CREATOR ONLY PANEL (single-role mode) ─── */
-.creator-only-panel .role-panel {
-  display: block !important;
-}
-.creator-only-panel .rp-body {
-  grid-template-columns: 1fr 360px;
 }

@@ -1,4 +1,4 @@
-﻿/* ════════════════════════════════════════════════════════════
+/* ════════════════════════════════════════════════════════════
    TIMETABLE PRO — LANDING PAGE JAVASCRIPT
    ════════════════════════════════════════════════════════════ */
 
@@ -154,15 +154,12 @@
   });
 
   /* ─── ROLE TABS ─── */
-  const rolePanels = document.querySelectorAll('.role-panel');
-  const roleTabs = document.querySelectorAll('.role-tab');
-
   window.switchRole = function (index) {
-    roleTabs.forEach((tab, i) => {
+    document.querySelectorAll('.role-tab').forEach(function(tab, i) {
       tab.classList.toggle('active', i === index);
       tab.setAttribute('aria-selected', (i === index).toString());
     });
-    rolePanels.forEach((panel, i) => {
+    document.querySelectorAll('.role-panel').forEach(function(panel, i) {
       panel.classList.toggle('active', i === index);
     });
   };
