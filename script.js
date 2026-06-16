@@ -154,15 +154,9 @@
   });
 
   /* ─── ROLE TABS ─── */
-  window.switchRole = function (index) {
-    document.querySelectorAll('.role-tab').forEach(function(tab, i) {
-      tab.classList.toggle('active', i === index);
-      tab.setAttribute('aria-selected', (i === index).toString());
-    });
-    document.querySelectorAll('.role-panel').forEach(function(panel, i) {
-      panel.classList.toggle('active', i === index);
-    });
-  };
+  // switchRole() is defined inline in <head> for guaranteed availability
+  // Ensure first tab is active on load
+  if (typeof switchRole === 'function') switchRole(0);
 
   /* ─── SMOOTH SCROLL for anchor links ─── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
