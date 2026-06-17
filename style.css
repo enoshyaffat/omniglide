@@ -1666,6 +1666,91 @@ ul { list-style: none; }
   inset: 0;
   background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,200,210,0.06) 0%, transparent 60%);
 }
+/* ─── Role Panel Internals ─── */
+.rp-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 36px;
+  background: linear-gradient(135deg, rgba(14,165,160,0.12) 0%, rgba(0,212,170,0.06) 100%);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.rp-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-light);
+  letter-spacing: 1px;
+}
+
+.rp-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.rp-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 6px 16px;
+  border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 100px;
+  background: rgba(0,212,170,0.06);
+}
+
+.rp-body {
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 36px;
+  align-items: start;
+}
+
+.rp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.rp-check {
+  color: var(--primary-light);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rp-highlight {
+  background: rgba(14, 165, 160, 0.08);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  min-width: 240px;
+  max-width: 320px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.rp-highlight strong {
+  display: block;
+  color: var(--primary-light);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
 /* ═══════════════════════════════════════════════════
    SUCCESS SECTION
 ═══════════════════════════════════════════════════ */
