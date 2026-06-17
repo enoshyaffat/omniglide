@@ -74,16 +74,7 @@ function switchRole(index) {
         </div><div class="hb-item reveal-card"><span class="hb-icon"></span><strong>Secure</strong> with full audit trails &amp; backups
         </div></div></div></section><section class="roles-section section" id="roles">
 <div class="roles-bg"></div>
-<style>
-.rtw input[type=radio]{display:none}
-.rtw .rpanels .rpanel{display:none}
-#ta:checked~.rtabs label[for=ta],#tb:checked~.rtabs label[for=tb],#tc:checked~.rtabs label[for=tc],#td:checked~.rtabs label[for=td],#te:checked~.rtabs label[for=te]{color:#14c8c2;border-color:#0ea5a0;background:rgba(14,165,160,.15)}
-#ta:checked~.rpanels #pa{display:block}
-#tb:checked~.rpanels #pb{display:block}
-#tc:checked~.rpanels #pc{display:block}
-#td:checked~.rpanels #pd{display:block}
-#te:checked~.rpanels #pe{display:block}
-</style>
+
 <div class="container">
 <div class="section-header"><div class="section-tag">ACCESS LEVELS</div><h2 class="section-title">Five Roles. One Unified System.</h2><p class="section-desc">Every stakeholder gets a tailored experience — exactly the access they need, nothing more, nothing less.</p></div>
 <div class="rtw">
@@ -93,18 +84,18 @@ function switchRole(index) {
 <input type="radio" name="rt" id="td">
 <input type="radio" name="rt" id="te">
 <div class="rtabs roles-tabs">
-<label for="ta" class="role-tab">01. Creator</label>
-<label for="tb" class="role-tab">02. Timetable Controller</label>
-<label for="tc" class="role-tab">03. Chief Superintendent</label>
-<label for="td" class="role-tab">04. Faculty</label>
-<label for="te" class="role-tab">05. Administrator</label>
+<label for="ta" id="lbl_ta" class="role-tab">01. Creator</label>
+<label for="tb" id="lbl_tb" class="role-tab">02. Timetable Controller</label>
+<label for="tc" id="lbl_tc" class="role-tab">03. Chief Superintendent</label>
+<label for="td" id="lbl_td" class="role-tab">04. Faculty</label>
+<label for="te" id="lbl_te" class="role-tab">05. Administrator</label>
 </div>
 <div class="rpanels roles-panel-container">
-<div class="rpanel role-panel" id="pa"><div class="rp-header"><div class="rp-num">01.</div><div class="rp-title">Creator</div><div class="rp-tag">Setup &amp; Configuration</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Manage timetables, subjects, departments &amp; room data</li><li><span class="rp-check">&#10022;</span> Create &amp; manage classroom allotments</li><li><span class="rp-check">&#10022;</span> Import academic &amp; institutional data</li><li><span class="rp-check">&#10022;</span> Manage teachers &amp; teacher designations</li><li><span class="rp-check">&#10022;</span> Create &amp; manage invigilation sets</li><li><span class="rp-check">&#10022;</span> Access examination management modules</li><li><span class="rp-check">&#10022;</span> View schedules, duties, announcements &amp; operational data</li></ul><div class="rp-highlight"><strong>Key Role:</strong> The Creator sets up the entire academic environment — subjects, rooms, faculty and curriculum data — so the system runs smoothly for all other roles.</div></div></div>
-<div class="rpanel role-panel" id="pb"><div class="rp-header"><div class="rp-num">02.</div><div class="rp-title">Timetable Controller</div><div class="rp-tag">Scheduling &amp; Management</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Create, update, clone &amp; manage timetables</li><li><span class="rp-check">&#10022;</span> Manage subjects, departments &amp; room data</li><li><span class="rp-check">&#10022;</span> Create and manage classroom allotments</li><li><span class="rp-check">&#10022;</span> Configure room allocations &amp; timetable visibility</li><li><span class="rp-check">&#10022;</span> Import timetable-related academic data</li><li><span class="rp-check">&#10022;</span> View timetables, allotments, rooms &amp; scheduling information</li></ul><div class="rp-highlight"><strong>Key Benefit:</strong> What used to take days of manual work is reduced to hours — with intelligent conflict detection ensuring error-free timetables every time.</div></div></div>
-<div class="rpanel role-panel" id="pc"><div class="rp-header"><div class="rp-num">03.</div><div class="rp-title">Chief Superintendent</div><div class="rp-tag">Examination Authority</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Create &amp; manage invigilation sets</li><li><span class="rp-check">&#10022;</span> Manage teacher examination eligibility &amp; exemptions</li><li><span class="rp-check">&#10022;</span> Generate duties using automated allocation</li><li><span class="rp-check">&#10022;</span> Approve &amp; finalize examination duty allocations</li><li><span class="rp-check">&#10022;</span> Assign rooms for examination duties</li><li><span class="rp-check">&#10022;</span> Monitor examination schedules, sessions &amp; approvals</li></ul><div class="rp-highlight"><strong>Smart Rules:</strong> Leave-aware, department-proportional, max one duty per teacher per day — controlled randomization applied automatically.</div></div></div>
-<div class="rpanel role-panel" id="pd"><div class="rp-header"><div class="rp-num">04.</div><div class="rp-title">Faculty</div><div class="rp-tag">View &amp; Self-Service</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> View assigned examination duties &amp; upcoming invigilation sessions</li><li><span class="rp-check">&#10022;</span> Access finalized duty schedules, session details &amp; durations</li><li><span class="rp-check">&#10022;</span> View published timetables, room allotments &amp; academic schedules</li><li><span class="rp-check">&#10022;</span> Apply for leave and track leave approval status</li><li><span class="rp-check">&#10022;</span> Receive examination announcements &amp; duty notifications</li><li><span class="rp-check">&#10022;</span> Download duty certificates on demand</li></ul><div class="rp-highlight"><strong>Key Benefit:</strong> Faculty spend zero time chasing schedules — their timetables, duties and announcements are visible instantly in one place, on any device.</div></div></div>
-<div class="rpanel role-panel" id="pe"><div class="rp-header"><div class="rp-num">05.</div><div class="rp-title">Administrator</div><div class="rp-tag">Full System Control</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Full access to all other roles' actions</li><li><span class="rp-check">&#10022;</span> Can create, view, edit &amp; delete any data in the system</li><li><span class="rp-check">&#10022;</span> Assign &amp; modify user roles and permissions</li><li><span class="rp-check">&#10022;</span> Access and monitor audit logs &amp; system activity</li><li><span class="rp-check">&#10022;</span> Perform database backup &amp; restore operations</li><li><span class="rp-check">&#10022;</span> Access all records, schedules, duties &amp; institutional data</li></ul><div class="rp-highlight"><strong>Complete Oversight:</strong> Administrators have full visibility and control — audit every action, restore data instantly, and configure the entire institution from one dashboard.</div></div></div>
+<div class="rpanel" id="pa"><div class="rp-header"><div class="rp-num">01.</div><div class="rp-title">Creator</div><div class="rp-tag">Setup &amp; Configuration</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Manage timetables, subjects, departments &amp; room data</li><li><span class="rp-check">&#10022;</span> Create &amp; manage classroom allotments</li><li><span class="rp-check">&#10022;</span> Import academic &amp; institutional data</li><li><span class="rp-check">&#10022;</span> Manage teachers &amp; teacher designations</li><li><span class="rp-check">&#10022;</span> Create &amp; manage invigilation sets</li><li><span class="rp-check">&#10022;</span> Access examination management modules</li><li><span class="rp-check">&#10022;</span> View schedules, duties, announcements &amp; operational data</li></ul><div class="rp-highlight"><strong>Key Role:</strong> The Creator sets up the entire academic environment — subjects, rooms, faculty and curriculum data — so the system runs smoothly for all other roles.</div></div></div>
+<div class="rpanel" id="pb"><div class="rp-header"><div class="rp-num">02.</div><div class="rp-title">Timetable Controller</div><div class="rp-tag">Scheduling &amp; Management</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Create, update, clone &amp; manage timetables</li><li><span class="rp-check">&#10022;</span> Manage subjects, departments &amp; room data</li><li><span class="rp-check">&#10022;</span> Create and manage classroom allotments</li><li><span class="rp-check">&#10022;</span> Configure room allocations &amp; timetable visibility</li><li><span class="rp-check">&#10022;</span> Import timetable-related academic data</li><li><span class="rp-check">&#10022;</span> View timetables, allotments, rooms &amp; scheduling information</li></ul><div class="rp-highlight"><strong>Key Benefit:</strong> What used to take days of manual work is reduced to hours — with intelligent conflict detection ensuring error-free timetables every time.</div></div></div>
+<div class="rpanel" id="pc"><div class="rp-header"><div class="rp-num">03.</div><div class="rp-title">Chief Superintendent</div><div class="rp-tag">Examination Authority</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Create &amp; manage invigilation sets</li><li><span class="rp-check">&#10022;</span> Manage teacher examination eligibility &amp; exemptions</li><li><span class="rp-check">&#10022;</span> Generate duties using automated allocation</li><li><span class="rp-check">&#10022;</span> Approve &amp; finalize examination duty allocations</li><li><span class="rp-check">&#10022;</span> Assign rooms for examination duties</li><li><span class="rp-check">&#10022;</span> Monitor examination schedules, sessions &amp; approvals</li></ul><div class="rp-highlight"><strong>Smart Rules:</strong> Leave-aware, department-proportional, max one duty per teacher per day — controlled randomization applied automatically.</div></div></div>
+<div class="rpanel" id="pd"><div class="rp-header"><div class="rp-num">04.</div><div class="rp-title">Faculty</div><div class="rp-tag">View &amp; Self-Service</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> View assigned examination duties &amp; upcoming invigilation sessions</li><li><span class="rp-check">&#10022;</span> Access finalized duty schedules, session details &amp; durations</li><li><span class="rp-check">&#10022;</span> View published timetables, room allotments &amp; academic schedules</li><li><span class="rp-check">&#10022;</span> Apply for leave and track leave approval status</li><li><span class="rp-check">&#10022;</span> Receive examination announcements &amp; duty notifications</li><li><span class="rp-check">&#10022;</span> Download duty certificates on demand</li></ul><div class="rp-highlight"><strong>Key Benefit:</strong> Faculty spend zero time chasing schedules — their timetables, duties and announcements are visible instantly in one place, on any device.</div></div></div>
+<div class="rpanel" id="pe"><div class="rp-header"><div class="rp-num">05.</div><div class="rp-title">Administrator</div><div class="rp-tag">Full System Control</div></div><div class="rp-body"><ul class="rp-list"><li><span class="rp-check">&#10022;</span> Full access to all other roles' actions</li><li><span class="rp-check">&#10022;</span> Can create, view, edit &amp; delete any data in the system</li><li><span class="rp-check">&#10022;</span> Assign &amp; modify user roles and permissions</li><li><span class="rp-check">&#10022;</span> Access and monitor audit logs &amp; system activity</li><li><span class="rp-check">&#10022;</span> Perform database backup &amp; restore operations</li><li><span class="rp-check">&#10022;</span> Access all records, schedules, duties &amp; institutional data</li></ul><div class="rp-highlight"><strong>Complete Oversight:</strong> Administrators have full visibility and control — audit every action, restore data instantly, and configure the entire institution from one dashboard.</div></div></div>
 </div>
 </div>
 </div>
@@ -121,4 +112,42 @@ function switchRole(index) {
        FOOTER
   ══════════════════════════════════════════════ --><footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo"><span class="logo-icon">✦</span><span>Timetable <strong>Pro</strong></span></div><p>End-to-End Examination &amp; Timetable Management Platform. Built for modern educational institutions.</p><div class="footer-tagline">Powered by Christ Innovation Center</div></div><div class="footer-links-col"><h4>Product</h4><a href="#mission">Mission &amp; Vision</a><a href="#features">Features</a><a href="#how-it-works">How It Works</a><a href="#roles">Access Roles</a><a href="#pricing">Pricing</a><a href="#roadmap">Add-Ons</a></div><div class="footer-links-col"><h4>Institution</h4><a href="#success">Success Story</a><a href="#contact">Contact Us</a><a href="mailto:incubation@christci.in">Get a Demo</a><a href="https://christcollegeijk.edu.in" target="_blank">christcollegeijk.edu.in</a></div><div class="footer-links-col"><h4>Technology</h4><span class="footer-tech">Go (Golang) Backend</span><span class="footer-tech">React Frontend</span><span class="footer-tech">PostgreSQL Database</span><span class="footer-tech">JWT Authentication</span><span class="footer-tech">Docker Deployment</span></div></div><div class="footer-bottom"><span>© 2025 Christ Innovation Center. All rights reserved.</span><span>Christ Nagar, Irinjalakuda, Kerala 680125</span></div></div></footer><!-- Back to Top --><button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     ↑
-  </button><script src="script.js"></script></body></html>
+  </button><script src="script.js"></script>
+<script>
+// ROLE TABS - direct getElementById, no CSS dependency
+(function() {
+  var panelIds = ['pa','pb','pc','pd','pe'];
+  var tabIds   = ['ta','tb','tc','td','te'];
+
+  function showRole(idx) {
+    // Hide all panels
+    panelIds.forEach(function(id, i) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.cssText = i === idx
+        ? 'display:block;opacity:1;'
+        : 'display:none;';
+    });
+    // Style tabs
+    tabIds.forEach(function(id, i) {
+      var el = document.getElementById('lbl_' + id);
+      if (!el) return;
+      el.style.cssText = i === idx
+        ? 'color:#14c8c2;border-color:#0ea5a0;background:rgba(14,165,160,0.15);'
+        : '';
+    });
+  }
+
+  // Attach click to each label
+  tabIds.forEach(function(id, idx) {
+    var lbl = document.getElementById('lbl_' + id);
+    if (lbl) {
+      lbl.addEventListener('click', function() { showRole(idx); });
+    }
+  });
+
+  // Show first panel on load
+  showRole(0);
+})();
+</script>
+</body></html>
