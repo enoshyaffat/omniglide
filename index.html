@@ -2,19 +2,20 @@
 function switchRole(index) {
   var tabs = document.querySelectorAll('.role-tab');
   var panels = document.querySelectorAll('.role-panel');
-  tabs.forEach(function(tab, i) {
-    tab.classList.toggle('active', i === index);
-    tab.setAttribute('aria-selected', String(i === index));
-  });
-  panels.forEach(function(panel, i) {
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].className = 'role-tab' + (i === index ? ' active' : '');
+  }
+  for (var i = 0; i < panels.length; i++) {
+    var p = panels[i];
+    p.removeAttribute('style');
     if (i === index) {
-      panel.style.display = 'block';
-      panel.classList.add('active');
+      p.setAttribute('style', 'display:block!important;opacity:1!important;visibility:visible!important;');
+      p.className = 'role-panel active';
     } else {
-      panel.style.display = 'none';
-      panel.classList.remove('active');
+      p.setAttribute('style', 'display:none!important;');
+      p.className = 'role-panel';
     }
-  });
+  }
 }
 </script></head><body><!-- ══════════════════════════════════════════════
        FULL-PAGE ANIMATED ORB BACKGROUND
