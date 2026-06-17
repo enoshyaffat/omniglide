@@ -1581,30 +1581,26 @@ ul { list-style: none; }
 .hb-item strong { color: var(--text-primary); }
 
 /* ═══════════════════════════════════════════════════
-   ROLES SECTION
+   ROLES SECTION — Pure CSS Radio Tab System
 ═══════════════════════════════════════════════════ */
-.roles-section {
-  background: rgba(7, 16, 24, 0.65);
-  overflow: hidden;
+
+/* Hide the radio inputs */
+.role-tabs-wrapper input[type="radio"] {
+  display: none;
 }
 
-.roles-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,200,210,0.06) 0%, transparent 60%);
+.role-tabs-wrapper {
+  position: relative;
 }
 
+/* Tab labels */
 .roles-tabs {
   display: flex;
   gap: 8px;
   margin-bottom: 32px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
-.roles-tabs::-webkit-scrollbar { display: none; }
 
 .role-tab {
   font-size: 13px;
@@ -1614,8 +1610,10 @@ ul { list-style: none; }
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: transparent;
-  cursor: default;
+  cursor: pointer;
+  transition: var(--transition);
   white-space: nowrap;
+  user-select: none;
 }
 
 .role-tab:hover {
@@ -1624,125 +1622,50 @@ ul { list-style: none; }
   background: var(--bg-glass);
 }
 
-.role-tab.active {
+/* Active tab — highlighted when its radio is checked */
+#rt0:checked ~ .roles-tabs label[for="rt0"],
+#rt1:checked ~ .roles-tabs label[for="rt1"],
+#rt2:checked ~ .roles-tabs label[for="rt2"],
+#rt3:checked ~ .roles-tabs label[for="rt3"],
+#rt4:checked ~ .roles-tabs label[for="rt4"] {
   color: var(--primary-light);
   border-color: var(--primary);
   background: rgba(14, 165, 160, 0.12);
 }
 
+/* Panel container */
 .roles-panel-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  position: relative;
 }
 
+/* All panels hidden by default */
 .role-panel {
-  display: block;
+  display: none;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   overflow: hidden;
   backdrop-filter: blur(10px);
-  margin-bottom: 0;
-}
-
-.role-panel.active {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
   animation: panelFadeIn 0.35s ease forwards;
 }
+
+/* Show panel when its radio is checked */
+#rt0:checked ~ .roles-panel-container #rp0 { display: block; }
+#rt1:checked ~ .roles-panel-container #rp1 { display: block; }
+#rt2:checked ~ .roles-panel-container #rp2 { display: block; }
+#rt3:checked ~ .roles-panel-container #rp3 { display: block; }
+#rt4:checked ~ .roles-panel-container #rp4 { display: block; }
 
 @keyframes panelFadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.rp-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 28px 36px;
-  background: linear-gradient(135deg, rgba(14,165,160,0.12) 0%, rgba(0,212,170,0.06) 100%);
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
+.roles-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,200,210,0.06) 0%, transparent 60%);
 }
-
-.rp-num {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--primary-light);
-  letter-spacing: 1px;
-}
-
-.rp-title {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--text-primary);
-  flex: 1;
-}
-
-.rp-tag {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent);
-  padding: 6px 16px;
-  border: 1px solid rgba(0,212,170,0.25);
-  border-radius: 100px;
-  background: rgba(0,212,170,0.06);
-}
-
-.rp-body {
-  padding: 36px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 36px;
-  align-items: start;
-}
-
-.rp-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.rp-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.rp-check {
-  color: var(--primary-light);
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.rp-highlight {
-  background: rgba(14, 165, 160, 0.08);
-  border: 1px solid var(--border-glow);
-  border-radius: var(--radius-md);
-  padding: 20px 24px;
-  min-width: 240px;
-  max-width: 320px;
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.rp-highlight strong {
-  display: block;
-  color: var(--primary-light);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
 /* ═══════════════════════════════════════════════════
    SUCCESS SECTION
 ═══════════════════════════════════════════════════ */
