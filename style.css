@@ -1646,8 +1646,7 @@ ul { list-style: none; }
   border-radius: var(--radius-xl);
   overflow: hidden;
   backdrop-filter: blur(10px);
-  animation: panelFadeIn 0.35s ease forwards;
-}
+  }
 
 /* Show panel when its radio is checked */
 #rt0:checked ~ .roles-panel-container #rp0 { display: block; }
