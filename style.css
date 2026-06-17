@@ -1665,6 +1665,15 @@ ul { list-style: none; }
   inset: 0;
   background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,200,210,0.06) 0%, transparent 60%);
 }
+
+/* Role panel base (rp0-rp4) */
+#rp0,#rp1,#rp2,#rp3,#rp4 {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
 /* ─── Role Panel Internals ─── */
 .rp-header {
   display: flex;
