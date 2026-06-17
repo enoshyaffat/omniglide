@@ -1,4 +1,4 @@
-/* ════════════════════════════════════════════════════════════
+﻿/* ════════════════════════════════════════════════════════════
    TIMETABLE PRO — LANDING PAGE JAVASCRIPT
    ════════════════════════════════════════════════════════════ */
 
@@ -213,9 +213,9 @@
   if (christLogo) {
     // Try multiple relative paths
     const logoPaths = [
-      '../assets/christ_college_logo.png',
-      '../brochure/christ_college_logo.png',
-      '../presentation/christ_college_logo.png',
+      'christ_college_logo.png',
+      'christ_college_logo.png',
+      'christ_college_logo.png',
     ];
 
     let logoIndex = 0;
