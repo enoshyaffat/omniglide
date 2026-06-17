@@ -1,4 +1,4 @@
-/* ════════════════════════════════════════════════════════════
+﻿/* ════════════════════════════════════════════════════════════
    OMNIGLIDE — MARKETING LANDING PAGE
    Premium Dark Theme with Glassmorphism & Micro-animations
    End-to-End Examination & Timetable Management Platform
@@ -1614,8 +1614,7 @@ ul { list-style: none; }
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: transparent;
-  cursor: pointer;
-  transition: var(--transition);
+  cursor: default;
   white-space: nowrap;
 }
 
@@ -1632,16 +1631,19 @@ ul { list-style: none; }
 }
 
 .roles-panel-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .role-panel {
-  display: none !important;
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   overflow: hidden;
   backdrop-filter: blur(10px);
+  margin-bottom: 0;
 }
 
 .role-panel.active {
